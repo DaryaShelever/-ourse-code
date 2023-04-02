@@ -12,9 +12,8 @@ public class RaceCar implements Car {
 	@Autowired
 	@Qualifier("turboEngine")
 	private Engine engine;
-	private int maxSpeed= 210;
+	private int maxSpeed = 210;
 
-	@Override
 	public void start() {
 		engine.turnOnn();
 		System.out.println("Race car started");
@@ -23,11 +22,11 @@ public class RaceCar implements Car {
 
 	@Override
 	public void drive(int speed) {
-		if( speed<= maxSpeed) {
-		System.out.println("Race car driving at speed "+ speed);
-		}else {
+		if (speed <= maxSpeed) {
+			System.out.println("Race car driving at speed " + speed);
+		} else {
 			System.out.println("erorr - over max speed");
-			
+
 		}
 	}
 
@@ -41,7 +40,6 @@ public class RaceCar implements Car {
 	@Override
 	public int getMaxSpeed() {
 		return maxSpeed;
-		
 
 	}
 
